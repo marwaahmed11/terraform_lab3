@@ -1,0 +1,3 @@
+
+terraform-public-ec2 44.211.191.230 
+terraform-public-ec2-2 50.17.28.125 
