@@ -16,6 +16,10 @@ resource "aws_instance" "ec2_public" {
         command = "echo ${var.public-ec2-name[count.index]} ${self.public_ip} >> ./all-ips.txt"
       
     }
+#     provisioner "local-exec" {
+#         command = "echo ${var.public-ec2-name[count.index]} ${self.private_ip} >> ./all-ips.txt"
+      
+#     }
     provisioner "remote-exec" {
         inline =  ["sudo apt update -y",
         "sudo apt install -y nginx",
